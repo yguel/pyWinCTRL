@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pywinctrl"
+version = "0.1.0"
+description = ""
+authors = ["Manuel YGUEL <manuel.yguel@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ewmh = "^0.1.6"
+
+[tool.poetry.scripts]
+win_offbar = "scripts.undemand_attention.undemand_attention:main"
+chrome_offbar = "scripts.undemand_attention_for_chrome_windows.undemand_attention_for_chrome_windows:main"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
