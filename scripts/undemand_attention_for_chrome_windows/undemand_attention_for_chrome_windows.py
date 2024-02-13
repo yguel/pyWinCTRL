@@ -1,4 +1,4 @@
-from winctrl import WinCtrl
+from pywinctrl import WinCtrl
 import click
 
 @click.command()

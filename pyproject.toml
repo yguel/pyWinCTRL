@@ -16,6 +16,10 @@ chrome_offbar = "scripts.undemand_attention_for_chrome_windows.undemand_attentio
 [tool.poetry.group.test.dependencies]
 pytest = "^8.0.0"
 
+
+[tool.poetry.group.scripts.dependencies]
+click = "^8.1.7"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
