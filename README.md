@@ -28,7 +28,7 @@ chrome_offbar
 
 ### Solve sudden error:  ImportError: cannot import name 'appengine' from 'requests.packages.urllib3.contrib' 
 
-It may works great for a while and then suddenly stop working with the following error:
+It may work great for a while and then suddenly stop working with the following error:
 ```bash
 ImportError: cannot import name 'appengine' from 'requests.packages.urllib3.contrib'
 ```
@@ -39,7 +39,9 @@ pip install --upgrade twine requests-toolbelt
 ```
 
 The cause is that the latest version of ``requests`` does not support ``urllib3 2.0.0``.
-That may be triggered by changed of versions of ``requests-toolbelt`` and/or ``urllib3``
+\
+That may be triggered by changes in versions of ``requests-toolbelt`` and/or ``urllib3``.
+\
 The question is why ``poetry`` requires to use ``requests`` to run the script, since it is not listed in the ``pyproject.toml`` file.
 
 Credits for the solution:
