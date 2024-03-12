@@ -8,7 +8,7 @@ poetry install
 ```
 2. Create a bash alias for the script by adding the following line to your `.bashrc` or `.bash_aliases` file:
 ```bash
-alias chrome_offbar="cd where_I_put_this_poetry_project/pyWinCTRL && bash -c 'poetry run chrome_offbar' && cd -"
+alias chrome_offbar="cd where_I_put_this_poetry_project/pyWinCTRL && bash -c 'python3.10 -m poetry run chrome_offbar' && cd - > /dev/null"
 ```
 replacing `where_I_put_this_poetry_project` with the path to the directory where you dowloaded this poetry project.
 
