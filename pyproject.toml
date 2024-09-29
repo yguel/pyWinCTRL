@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 ewmh = "^0.1.6"
+click = "^8.1.7"
 
 [tool.poetry.scripts]
 win_offbar = "scripts.undemand_attention.undemand_attention:main"
