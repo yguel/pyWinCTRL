@@ -26,17 +26,21 @@ So I wrote this script to make all the chrome windows stop demanding attention.
 
 ## Install
 
-1. Go to the directory where you want to install the script and run the following command:
+1. Install [poetry](https://python-poetry.org/docs/#installation) using the recommended installation method for your OS. For instance on linux:
+```bash
+curl -sSL https://install.python-poetry.org | python3 -
+```
+2. Go to the directory where you want to install the script and run the following command:
 ```bash
 poetry install
 ```
-2. Create a bash alias for the script by adding the following line to your `.bashrc` or `.bash_aliases` file:
+3. Create a bash alias for the script by adding the following line to your `.bashrc` or `.bash_aliases` file:
 ```bash
-alias chrome_offbar="cd where_I_put_this_poetry_project/pyWinCTRL && bash -c 'python3.10 -m poetry run chrome_offbar' && cd - > /dev/null"
+alias chrome_offbar="cd where_I_put_this_poetry_project/pyWinCTRL && bash -c '~/.local/bin/poetry run chrome_offbar' && cd - > /dev/null"
 ```
 replacing `where_I_put_this_poetry_project` with the path to the directory where you dowloaded this poetry project.
 
-3. Run the following command to apply the changes:
+4. Run the following command to apply the changes:
 ```bash
 source ~/.bashrc
 ```
