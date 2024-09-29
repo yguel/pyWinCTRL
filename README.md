@@ -92,3 +92,50 @@ Credits for the solution:
 
 Credits for the explanation:
  - [Paul on stackoverflow](https://stackoverflow.com/a/76177575/938287)
+
+### Solve sudden error: ImportError: cannot import name 'Application' from 'cleo' 
+
+Cleo is actually a dependency of poetry.
+
+It means that something is wrong with your poetry installation and that poetry is not installed properly for pyWinCTRL to run.
+
+A solution is to reinstall poetry with the recommended installation method for your OS, then by ensuring that pyWinCTRL uses ```~/.local/bin/poetry``` to run poetry, which is the default path for the recommended installation of poetry, pyWinTRL will be run with the expected poetry binary.
+
+You can ensure that no problematic poetry installation is used by removing the faulty poetry (beware it may brake programs that were using this poetry installation but that would use obsolete installations of poetry).
+
+To uninstall poetry, you can use the following steps:
+First looks for the poetry installation path:
+```bash
+which poetry
+```
+If you have something different from `~/.local/bin/poetry` for instance:
+```bash
+/home/myuser/.pyenv/shims/poetry
+```
+Then proceed as follows:
+1. List all pyenv Python versions:
+```bash
+pyenv versions
+```
+2. Check which version is currently active:
+```bash
+pyenv version
+```
+3. Activate the version you want to uninstall poetry from (e.g. 3.8.2):
+```bash
+pyenv shell 3.8.2
+```
+4. Show where poetry is installed on this version to confirm it is the same version you got from the `which poetry` command:
+```bash
+pip show poetry
+```
+5. Once you have confirmation that it is the version of poetry you need to uninstall, uninstall poetry:
+```bash
+pip uninstall poetry
+```
+
+Then (re)install poetry using the recommended installation method for your OS.
+For instance on linux:
+```bash
+curl -sSL https://install.python-poetry.org | python3 -
+```
